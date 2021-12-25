@@ -9,6 +9,7 @@ import {OnOff} from "./components/OnOff/OnOff";
 import {Select} from "./components/Select/Select";
 import {Test} from "./components/Test";
 import {Clock} from "./components/Clock/Clock";
+import {AnalogClockView} from "./components/Clock/AnalogClockView";
 
 
 function App() {
@@ -53,7 +54,7 @@ const [value, setValue] = useState('2');
       <Test />
 */}
 
-      <Clock />
+      <Clock  mode={"analog"}/>
 
     </div>
   );
