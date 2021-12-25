@@ -1,0 +1,27 @@
+.str {
+    display: inline-block;
+}
+
+.on {
+    width: 40px;
+    height: 20px;
+    border: 1px solid;
+    background: green;
+}
+
+.off {
+    width: 40px;
+    height: 20px;
+    border: 1px solid;
+}
+
+.circle {
+    width: 14px;
+    height: 14px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.red {
+    background: red!important;
+}
