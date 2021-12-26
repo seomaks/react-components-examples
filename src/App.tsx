@@ -9,63 +9,71 @@ import {OnOff} from "./components/OnOff/OnOff";
 import {Select} from "./components/Select/Select";
 import {Test} from "./components/Test";
 import {Clock} from "./components/Clock/Clock";
-import {AnalogClockView} from "./components/Clock/AnalogClockView";
-
 
 function App() {
 
-/*  let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
+  let [ratingValue, setRatingValue] = useState<RatingValueType>(4) // rating
+  let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true) // accordion
+  let [switchOn, setSwitchOn] = useState<boolean>(false) // switch on
+  const [value, setValue] = useState('2'); // select
 
-  let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
-  let [switchOn, setSwitchOn] = useState<boolean>(false)*/
-
-const [value, setValue] = useState('2');
   return (
     <div>
-     {/* {<PageTitle title={"This is APP component"}/>
+      <PageTitle title={"This is APP component"}/>
       <PageTitle title={"My friends"}/>
-      <UncontrolledAccordion titleValue={"Menu"} />
-      <UncontrolledAccordion titleValue={"Users"} />
+      <hr/>
+
+      <UncontrolledAccordion titleValue={"Menu"}/>
+      <UncontrolledAccordion titleValue={"Users"}/>
+      <hr/>
 
       <UncontrolledRating/>
+      <hr/>
+
       <Rating value={ratingValue} onClick={setRatingValue}/>
+      <hr/>
+
       <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+      <hr/>
+
       <OnOff on={switchOn} onChange={
-        setSwitchOn}/>}
+        setSwitchOn}/>
+      <hr/>
 
-
-      {  <Accordion titleValue={"Students"} collapsed={accordionCollapsed}
+      <Accordion titleValue={"Students"} collapsed={accordionCollapsed}
                  onChange={() => {
                    setAccordionCollapsed(!accordionCollapsed)
-                 }} items ={[{title: "Maks", value: 1},
+                 }} items={[{title: "Maks", value: 1},
         {title: "Olya", value: 2},
-        {title: "Katya", value: 3}]} onClick={(id) => {alert(`user with ID ${id} should be happy`)}}/>}*/}
+        {title: "Katya", value: 3}]} onClick={(id) => {
+        alert(`user with ID ${id} should be happy`)
+      }}/>
+      <hr/>
 
- {/*     <Select
+      <Test/>
+      <hr/>
+      <Clock mode={"analog"}/>
+      <hr/>
+
+      <Select
         onChange={setValue}
         value={value}
         items={[
           {value: "1", title: "Minsk"},
           {value: "2", title: "Murmansk"},
           {value: "3", title: "Riga"},
-        ]}/>*/}
-
-{/*
-      <Test />
-*/}
-
-      <Clock  mode={"analog"}/>
-
+        ]}/>
+      <hr/>
     </div>
   );
 }
 
-/*type PageTitlePropsType = {
+type PageTitlePropsType = {
   title: string
 }
 
 function PageTitle(props: PageTitlePropsType) {
   return <h1>{props.title}</h1>
-}*/
+}
 
 export default App;
